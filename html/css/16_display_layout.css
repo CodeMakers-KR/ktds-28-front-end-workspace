@@ -1,0 +1,102 @@
+/** @format */
+
+* {
+  box-sizing: border-box;
+  color: #333;
+}
+
+.issue-up {
+  width: 880px;
+  font-size: 0px;
+
+  border-top: 1px solid #000;
+  margin: 0 auto;
+}
+
+.navigation {
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  margin: 1.2rem 0 0.8rem 0;
+}
+
+.nav-title {
+  vertical-align: middle;
+
+  display: inline-block;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.nav-item {
+  vertical-align: middle;
+
+  display: inline-block;
+
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 1.5rem;
+  margin-left: 10px;
+
+  font-size: 1rem;
+  color: #666;
+}
+
+.active-item {
+  background-color: #f55454;
+  color: #fff;
+  font-weight: 900;
+  border: 1px solid #f55454;
+}
+
+.notice {
+  font-size: 1rem;
+  text-align: center;
+
+  background-color: #f6f6fb;
+
+  padding: 30px 0;
+  border-radius: 7px;
+  margin: 1rem 0;
+}
+
+.fun-list {
+  margin: 0;
+  padding: 0;
+  font-size: 0px;
+}
+
+.fun-item {
+  display: inline-block;
+  width: 23.25%;
+  margin-right: 20px;
+  margin-bottom: 25px;
+}
+
+.image {
+  background-color: #eee;
+  height: 150px;
+
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.category {
+  color: #f55454;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.no-right-margin {
+  margin-right: 0;
+}
+
+.no-bottom-margin {
+  margin-bottom: 0;
+}
