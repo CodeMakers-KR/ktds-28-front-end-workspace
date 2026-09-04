@@ -1,14 +1,249 @@
 /** @format */
 :root {
+  --text-black: #333;
+  --white: #fff;
+  --footer-button-text-color: #888;
+  --background-color: #4b4b4b;
   --header-background-color: #fed50a;
   --header-border-color: #e3a20e;
+  --menu-background-color: #f9f9f9;
+  --menu-border-color: #bbb;
+  --menu-active-color: #fe0059;
+  --notice-icon-border-color: #b63232;
+  --notice-color: #f00;
+  --article-border-color: #eee;
+  --reply-count-font-color: #ff7300;
+  --author-name-font-color: #d54f00;
+  --write-datetime-font-color: #888;
+  --navigator-border-color: #888;
 }
 
-.header {
-  background-color: var(--header-background-color);
-  border-bottom: 1px solid var(--header-border-color);
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
 img {
   vertical-align: middle;
+  height: 40px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-black);
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: var(--header-background-color);
+
+  padding: 3px;
+  border-bottom: 1px solid var(--header-border-color);
+
+  font-size: 0px;
+}
+
+.header img {
+  cursor: pointer;
+}
+
+.header-left,
+.header-right {
+  display: inline-block;
+  width: 50%;
+}
+
+.header-left {
+  padding-left: 8px;
+}
+
+.header-right {
+  text-align: right;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--menu-border-color);
+
+  background-color: var(--menu-background-color);
+
+  font-size: 0;
+  text-align: center;
+}
+
+.menu > li {
+  display: inline-block;
+
+  vertical-align: top;
+  width: 43%;
+  padding: 10px 0 7px 0;
+
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.margin-right {
+  margin-right: 2rem;
+}
+
+.active {
+  font-weight: 900;
+  color: var(--menu-active-color);
+
+  border-bottom: 3px solid var(--menu-active-color);
+}
+
+.articles {
+  background-color: var(--white);
+
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+
+  list-style-type: none;
+}
+
+.articles > li {
+  padding: 7px 0;
+  border-bottom: 1px solid var(--article-border-color);
+
+  font-size: 0;
+}
+
+.title,
+.author {
+  padding: 3px 0;
+}
+
+.notice-icon {
+  display: inline-block;
+  color: var(--white);
+  font-size: 0.8rem;
+
+  background-color: var(--notice-color);
+  padding: 2px 5px 1px 5px;
+  border: 1px solid var(--notice-icon-border-color);
+  border-radius: 3px;
+
+  vertical-align: bottom;
+}
+
+.notice-title {
+  cursor: pointer;
+
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--notice-color);
+
+  margin: 0 5px;
+
+  vertical-align: bottom;
+}
+
+.reply-count {
+  font-size: 0.9rem;
+  color: var(--reply-count-font-color);
+
+  vertical-align: bottom;
+}
+
+.article-title {
+  font-size: 1.05rem;
+
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.author-name {
+  padding-right: 10px;
+  margin-right: 10px;
+
+  border-right: 1px solid #eee;
+
+  font-size: 0.8rem;
+  color: var(--author-name-font-color);
+}
+
+.article-no {
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid #eee;
+
+  font-size: 0.8rem;
+  color: var(--write-datetime-font-color);
+}
+.write-datetime {
+  font-size: 0.8rem;
+  color: var(--write-datetime-font-color);
+}
+
+.page-navigator {
+  background-color: var(--menu-background-color);
+
+  margin: 0;
+  padding: 1.5rem 0;
+
+  font-size: 0;
+  color: var(--navigator-border-color);
+  text-align: center;
+
+  list-style-type: none;
+}
+
+.page-item {
+  font-size: 0.95rem;
+  background-color: var(--white);
+
+  display: inline-block;
+
+  min-width: 26px;
+  padding: 7px 0 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 0 3px;
+
+  cursor: pointer;
+}
+
+.now-page-active {
+  font-weight: 500;
+  color: var(--menu-active-color);
+
+  border: 1px solid var(--menu-active-color);
+}
+
+.next-page {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.footer {
+  background-color: #222;
+
+  color: #555;
+  text-align: center;
+}
+
+.footer > button {
+  background-color: #444;
+
+  padding: 5px 10px 3px 10px;
+  border: none;
+  border-radius: 4px;
+  margin: 10px 0;
+
+  color: var(--footer-button-text-color);
+  font-size: 1.1rem;
+
+  cursor: pointer;
+}
+
+.footer > div {
+  padding: 2.1rem 0;
 }
