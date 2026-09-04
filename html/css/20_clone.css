@@ -137,7 +137,7 @@ body {
 .notice-title {
   cursor: pointer;
 
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 900;
   color: var(--notice-color);
 
@@ -147,14 +147,14 @@ body {
 }
 
 .reply-count {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--reply-count-font-color);
 
   vertical-align: bottom;
 }
 
 .article-title {
-  font-size: 1.05rem;
+  font-size: 1rem;
 
   margin-right: 5px;
   cursor: pointer;
@@ -166,7 +166,7 @@ body {
 
   border-right: 1px solid #eee;
 
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: var(--author-name-font-color);
 }
 
