@@ -2,18 +2,18 @@
 :root {
   --text-black: #333;
   --white: #fff;
-  --footer-button-text-color: #888;
+  --footer-button-text-color: #aaa;
   --background-color: #4b4b4b;
   --header-background-color: #fed50a;
   --header-border-color: #e3a20e;
   --menu-background-color: #f1f1f1;
   --menu-border-color: #bbb;
-  --menu-active-color: #d84263;
-  --notice-icon-border-color: #be0e0e;
-  --notice-color: #db0000;
+  --menu-active-color: #f94064;
+  --notice-icon-border-color: #c00;
+  --notice-color: #f00;
   --article-border-color: #eee;
-  --reply-count-font-color: #df5a2e;
-  --author-name-font-color: #b06c3d;
+  --reply-count-font-color: #ff5722;
+  --author-name-font-color: #c46a33;
   --write-datetime-font-color: #888;
   --navigator-border-color: #888;
 }
@@ -225,9 +225,9 @@ body {
 }
 
 .footer {
-  background-color: #222;
+  background-color: #262626;
 
-  color: #555;
+  color: #5f5f5f;
   text-align: center;
 }
 
