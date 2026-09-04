@@ -1,0 +1,20 @@
+/** @format */
+* {
+  box-sizing: border-box;
+  color: #333;
+}
+
+body {
+  margin: 0;
+  background-color: #333;
+}
+
+.wrapper {
+  background-color: #fafafa;
+
+  width: 100%;
+  max-width: 680px;
+
+  padding: 10px;
+  margin: 0 auto;
+}
