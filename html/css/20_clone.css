@@ -1,0 +1,10 @@
+/** @format */
+:root {
+  --header-background-color: #fed50a;
+  --header-border-color: #e3a20e;
+}
+
+.header {
+  background-color: var(--header-background-color);
+  border-bottom: 1px solid var(--header-border-color);
+}
