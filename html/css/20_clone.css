@@ -6,14 +6,14 @@
   --background-color: #4b4b4b;
   --header-background-color: #fed50a;
   --header-border-color: #e3a20e;
-  --menu-background-color: #f9f9f9;
+  --menu-background-color: #f1f1f1;
   --menu-border-color: #bbb;
-  --menu-active-color: #fe0059;
-  --notice-icon-border-color: #b63232;
-  --notice-color: #f00;
+  --menu-active-color: #d84263;
+  --notice-icon-border-color: #be0e0e;
+  --notice-color: #db0000;
   --article-border-color: #eee;
-  --reply-count-font-color: #ff7300;
-  --author-name-font-color: #d54f00;
+  --reply-count-font-color: #df5a2e;
+  --author-name-font-color: #b06c3d;
   --write-datetime-font-color: #888;
   --navigator-border-color: #888;
 }
@@ -166,7 +166,7 @@ body {
 
   border-right: 1px solid #eee;
 
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--author-name-font-color);
 }
 
@@ -174,11 +174,12 @@ body {
   padding-right: 10px;
   margin-right: 10px;
   border-right: 1px solid #eee;
-
+  letter-spacing: -0.7px;
   font-size: 0.8rem;
   color: var(--write-datetime-font-color);
 }
 .write-datetime {
+  letter-spacing: -0.3px;
   font-size: 0.8rem;
   color: var(--write-datetime-font-color);
 }
