@@ -98,3 +98,176 @@
   padding: 10px;
   border: 2px solid #000;
 }
+
+.relative-1 {
+  width: 500px;
+
+  position: relative;
+
+  background-color: antiquewhite;
+
+  padding: 10px;
+  border: 2px solid #000;
+}
+
+.relative-2 {
+  width: 500px;
+
+  position: relative;
+  top: 100px;
+  left: 100px;
+
+  background-color: antiquewhite;
+
+  padding: 10px;
+  border: 2px solid #000;
+}
+
+.relative-3 {
+  width: 500px;
+
+  position: relative;
+  bottom: 100px;
+  right: 100px;
+
+  background-color: antiquewhite;
+
+  padding: 10px;
+  border: 2px solid #000;
+}
+
+.relative-box {
+  position: relative;
+
+  font-size: 1.3rem;
+
+  width: 300px;
+  height: 600px;
+
+  padding: 10px;
+  border: 2px solid #000;
+
+  background-color: aqua;
+}
+
+.relative-box:hover > .absolute-box {
+  top: 0px;
+}
+
+.absolute-box {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  padding: 10px;
+
+  background-color: #0008;
+  color: #fff;
+}
+
+.image-box {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+
+  position: relative;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+
+    vertical-align: bottom;
+  }
+
+  & > div {
+    position: absolute;
+
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    background-color: #d708da77;
+    color: #fff;
+    text-align: center;
+
+    padding: 10px;
+  }
+
+  &:hover > div {
+    top: 0px;
+    padding: 48% 0;
+  }
+}
+
+.hover-box {
+  position: relative;
+
+  width: 200px;
+  height: 300px;
+
+  margin: 10px;
+
+  background-color: aquamarine;
+
+  & > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: #ccc;
+    opacity: 0; /*박스의 투명도 조절 (0: 완전 투명)*/
+
+    /*hover-box에 hover 이벤트가 적용되었을 때 
+      hover-box > div 의
+      opacity를 0 부터 1까지 0.3초 동안 변경 애니메이션을 가속도를 적용해 진행한다. */
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover > div {
+    opacity: 1; /*박스의 투명도 조절 (1: 완전 불투명)*/
+  }
+}
+
+.guide-section {
+  & > h3 {
+    margin: 0;
+    padding-top: 50px;
+  }
+
+  /* .guide-section > ul */
+  & > ul {
+    position: sticky;
+    top: 0px;
+
+    background-color: #fff7;
+
+    /*배경이 번지게 설정*/
+    backdrop-filter: blur(10px);
+
+    padding: 10px 0;
+    border: 1px solid #000;
+    margin: 0;
+
+    /* .guide-section > ul > li */
+    & > li {
+      display: inline-block;
+      margin: 0 10px;
+
+      & > a {
+        color: #333;
+        text-decoration: none;
+
+        &:hover {
+          color: #f0f;
+        }
+      }
+      /* .guide-section > ul > li:last-child */
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
