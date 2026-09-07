@@ -242,12 +242,14 @@
     position: sticky;
     top: 0px;
 
-    background-color: #fff7;
+    /* background-color: #fff7; */
+    /* 배경색에 그라디언트 설정 */
+    background: linear-gradient(#fff, #fff0 50%, #fff);
 
-    /*배경이 번지게 설정*/
+    /* 배경이 번지게 설정 */
     backdrop-filter: blur(10px);
 
-    padding: 10px 0;
+    padding: 20px 0;
     border: 1px solid #000;
     margin: 0;
 
