@@ -1,0 +1,148 @@
+/** @format */
+/* 데스크탑용 스타일 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #333;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+}
+
+.navigator {
+  padding: 0.625rem 0;
+  margin: 0;
+
+  list-style-type: none;
+
+  background-color: #333;
+  color: #fff;
+
+  & > li {
+    display: inline-block;
+    margin: 0 0.625rem;
+  }
+}
+
+.banner {
+  height: 40vh;
+
+  background-image: url(../images/image-2.avif);
+  background-position: center;
+  background-size: cover;
+
+  position: relative;
+
+  & > .text {
+    margin: 0;
+
+    color: #fff8;
+    font-size: 7rem;
+    font-weight: 900;
+
+    position: absolute;
+    left: 4rem;
+    bottom: 2rem;
+  }
+}
+
+.icons {
+  padding: 3rem 0;
+  margin: 0;
+
+  list-style-type: none;
+
+  text-align: center;
+
+  & > li {
+    display: inline-block;
+
+    width: 8rem;
+    height: 8rem;
+    background-color: #fbb;
+
+    border: 0.6rem solid #f55;
+    border-radius: 50%;
+    margin-right: 10rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.main-text {
+  display: inline-block;
+  width: 48%;
+}
+
+.footer {
+  padding: 0.625rem;
+  margin-top: 1rem;
+
+  height: 10rem;
+
+  background-color: #888;
+
+  color: #fff;
+}
+
+/* 태블릿용 스타일 작성 */
+@media (max-width: 1200px) {
+  .icons {
+    & > li {
+      margin-right: 3rem;
+    }
+  }
+}
+
+/*화면의 크기가 448px 미만 일 때 보여줄 스타일을 작성.*/
+@media (max-width: 448px) {
+  .navigator {
+    white-space: nowrap;
+    overflow: auto;
+  }
+
+  .banner {
+    display: none;
+  }
+
+  .icons {
+    padding: 1rem;
+
+    & > li {
+      display: block;
+      margin: 0 auto;
+      margin-top: 1rem;
+
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin: 0 auto;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .main-text {
+    display: block;
+    width: 100%;
+
+    padding: 1rem;
+
+    font-size: 1.5rem;
+    text-align: justify;
+  }
+
+  .footer {
+    height: 5rem;
+  }
+}

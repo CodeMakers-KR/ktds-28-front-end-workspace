@@ -11,6 +11,8 @@ body {
 
 .footer {
   height: 30vh;
+  /* 7.8125rem ==> 125px */
+  min-height: 7.8125rem;
   background-color: violet;
 }
 
