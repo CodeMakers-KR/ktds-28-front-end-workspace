@@ -13,14 +13,15 @@ select {
 
 .form {
   width: 500px;
-  margin: 0 auto;
 
   padding: 0.625rem;
+  margin: 0 auto;
 
   & > .basic-info,
   & > .personal-info {
     border: 1px solid #ddd;
     border-radius: 0.5rem;
+
     margin-bottom: 0.625rem;
 
     & > div {
@@ -40,11 +41,12 @@ select {
         width: calc(100% - 14px - 85px);
       }
       &::before {
+        display: inline-block;
+        vertical-align: middle;
+
         width: 14px;
         height: 12px;
-        display: inline-block;
         content: "";
-        vertical-align: middle;
 
         background-image: url(../images/naver_sprite.png);
         background-size: 468px 452px;
@@ -53,11 +55,13 @@ select {
       }
       &::after {
         display: inline-block;
-        font-size: 1rem;
-        width: 85px;
-        content: "@naver.com";
         vertical-align: middle;
         text-align: right;
+
+        width: 85px;
+        font-size: 1rem;
+
+        content: "@naver.com";
       }
     }
 
@@ -67,11 +71,13 @@ select {
         vertical-align: middle;
       }
       &::before {
+        display: inline-block;
+        vertical-align: middle;
+
         width: 14px;
         height: 12px;
-        display: inline-block;
         content: "";
-        vertical-align: middle;
+
         background-image: url(../images/naver_sprite.png);
         background-size: 468px 452px;
         background-position: bottom -92px right -1px;
@@ -85,11 +91,13 @@ select {
         vertical-align: middle;
       }
       &::before {
+        display: inline-block;
+        vertical-align: middle;
+
         width: 14px;
         height: 12px;
-        display: inline-block;
         content: "";
-        vertical-align: middle;
+
         background-image: url(../images/naver_sprite.png);
         background-size: 468px 452px;
         background-position: bottom -92px right -1px;
@@ -106,23 +114,25 @@ select {
       text-align: 0 auto;
 
       & > div {
-        width: 50%;
-        padding: 0.3rem 0.625rem;
-        margin: 0 auto;
-
         display: inline-block;
         text-align: center;
+
+        width: 50%;
+
+        padding: 0.3rem 0.625rem;
+        margin: 0 auto;
       }
 
       & input[type="radio"] {
         display: none;
 
         & + label {
-          font-size: 1rem;
+          text-align: center;
+
+          border: 1px solid #ddd;
           padding: 0.3rem 0.625rem;
 
-          text-align: center;
-          border: 1px solid #ddd;
+          font-size: 1rem;
 
           &:first-of-type {
             border-top-left-radius: 0.5rem;
@@ -135,10 +145,11 @@ select {
         }
 
         &:checked + label {
-          padding: 0.3rem 0.625rem;
-          text-align: center;
-          border-color: #0bd641;
           color: #0bd641;
+          padding: 0.3rem 0.625rem;
+          border-color: #0bd641;
+
+          text-align: center;
         }
       }
     }
@@ -149,11 +160,14 @@ select {
         vertical-align: middle;
       }
       &::before {
+        display: inline-block;
+        vertical-align: middle;
+
         width: 14px;
         height: 12px;
-        display: inline-block;
+
         content: "";
-        vertical-align: middle;
+
         background-image: url(../images/naver_sprite.png);
         background-size: 468px 452px;
         background-position: bottom -92px right -1px;
@@ -167,11 +181,14 @@ select {
         vertical-align: middle;
       }
       &::before {
+        display: inline-block;
+        vertical-align: middle;
+
         width: 14px;
         height: 12px;
-        display: inline-block;
+
         content: "";
-        vertical-align: middle;
+
         background-image: url(../images/naver_sprite.png);
         background-size: 468px 452px;
         background-position: bottom -92px right -1px;
@@ -181,11 +198,14 @@ select {
 
     & .user-telecom {
       &::before {
+        display: inline-block;
+        vertical-align: middle;
+
         width: 14px;
         height: 12px;
-        display: inline-block;
+
         content: "";
-        vertical-align: middle;
+
         background-image: url(../images/naver_sprite.png);
         background-size: 468px 452px;
         background-position: bottom -92px right -1px;
@@ -194,41 +214,53 @@ select {
 
       & > div {
         display: inline-block;
+        vertical-align: middle;
+        position: relative;
+
         width: calc(100% - 14px);
-        padding: 0.625rem;
+
         font-size: 0.85rem;
         color: #888;
-        position: relative;
-        vertical-align: middle;
+
+        padding: 0.625rem;
+
         & > .telecoms {
           display: none;
         }
 
         &:hover {
           & > .telecoms {
-            font-size: 0;
             display: block;
             width: 12rem;
             position: absolute;
-            margin: 0;
+
+            color: #333;
+            font-size: 0;
+
             padding: 0;
+            margin: 0;
+
             list-style: none;
+
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 0.5rem;
+
             overflow: hidden;
-            color: #333;
 
             & > li {
               cursor: pointer;
+
+              display: inline-block;
+              width: 50%;
+
+              font-size: 0.75rem;
+              padding: 0.625rem;
+              border-bottom: 1px solid #ccc;
+
               &:hover {
                 background-color: #eee;
               }
-              font-size: 0.75rem;
-              display: inline-block;
-              padding: 0.625rem;
-              width: 50%;
-              border-bottom: 1px solid #ccc;
               &:nth-child(5),
               &:nth-child(6) {
                 border-bottom: 0;
@@ -245,25 +277,29 @@ select {
 
   & > .tel-info,
   & > .agreement-info {
+    padding: 0 0.625rem;
     border: 1px solid #ddd;
     border-radius: 0.5rem;
-    padding: 0 0.625rem;
   }
 
   & > .tel-info {
     font-size: 0;
+
     margin-bottom: 0.625rem;
     & > div {
       & > input[type="tel"] {
-        width: calc(100% - 14px);
         vertical-align: middle;
+        width: calc(100% - 14px);
       }
       &::before {
+        display: inline-block;
+        vertical-align: middle;
+
         width: 14px;
         height: 12px;
-        display: inline-block;
+
         content: "";
-        vertical-align: middle;
+
         background-image: url(../images/naver_sprite.png);
         background-size: 468px 452px;
         background-position: bottom -92px right -1px;
@@ -275,39 +311,44 @@ select {
   & > .agreement-info {
     font-size: 0;
     & > div {
-      width: calc(100% - 14px);
       vertical-align: middle;
+      width: calc(100% - 14px);
       & > input {
         display: none;
 
         & + label {
           display: inline-block;
-          padding: 0.625rem;
-          font-size: 0.825rem;
-          padding-left: 0;
           vertical-align: middle;
+
+          font-size: 0.825rem;
+          padding: 0.625rem;
+          padding-left: 0;
+
           & > div {
             display: inline-block;
             & > span {
               color: #0bd641;
               font-size: 0.7rem;
+
               padding-left: 0.625rem;
             }
           }
 
           &::before {
+            display: inline-block;
+            vertical-align: middle;
             width: 14px;
             height: 14px;
-            display: inline-block;
+
             content: "";
-            vertical-align: middle;
           }
         }
 
         &:checked + label::before {
+          display: inline-block;
+
           width: 14px;
           height: 14px;
-          display: inline-block;
           content: "";
 
           background-image: url(../images/naver_sprite.png);
