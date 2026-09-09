@@ -27,7 +27,7 @@ p[class^="child-"] {
 
 div.parent > [class^="child-"] {
   margin-left: 30px;
-  & > [class^="child-"] {
+  & [class^="child-"] {
     margin-left: 30px;
   }
 }
