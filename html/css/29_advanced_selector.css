@@ -30,11 +30,64 @@ div.parent [class^="child-"] {
 }
 
 /* "+" 아래쪽 인접 형제 하나만 선택 */
+.first + p {
+  color: #f00;
+  &::after {
+    content: " <- .first 인접 형제 중 p 태그 하나";
+  }
+}
+
+.second + p {
+  color: #f00;
+  &::after {
+    content: " <- .second 인접 형제 중 p 태그 하나";
+  }
+}
 
 /* "~" 아래쪽 형제 모두 선택 */
+.second ~ p {
+  color: #0f0;
+  &::after {
+    content: " <- .second 아래쪽 형제 중 모든 p 태그들";
+  }
+}
 
 /* "a:has(+ b)" b위의 a 형제 하나 선택 */
+p:has(+ .third) {
+  color: #00f;
+  &::after {
+    content: " <- .third 위쪽의 형제 중 p 태그 하나를 선택";
+  }
+}
+
+p:has(+ .fourth) {
+  color: #00f;
+  &::after {
+    content: " <- .fourth 위쪽의 형제 중 p 태그 하나를 선택";
+  }
+}
 
 /* "a:has(~ b)" b위의 a 모든 형제 선택 */
+p:has(~ .fourth) {
+  color: #f0f;
+  &::after {
+    content: " <- .fourth 위쪽의 형제 중 모든 p 태그를 선택";
+  }
+}
 
 /* "a:has(> b)" b의 부모 a 선택 */
+.parent:has(> .child-1) {
+  color: #550;
+  &::before {
+    content: "child-1의 부모 중 .parent -> ";
+    color: #f00;
+  }
+}
+
+.parent:has( .child-4) {
+  color: #550;
+  &::before {
+    content: "child-4의 부모 중 .parent -> ";
+    color: #f00;
+  }
+}

@@ -8,8 +8,23 @@
     <link type="text/css" rel="stylesheet" href="../css/29_form.css" />
   </head>
   <body>
-    <h1>Form Tags</h1>
+    <h1>checkbox, radio 스타일링</h1>
 
+    <label for="agree"></label>
+    <input type="checkbox" name="agree-terms" id="agree" />
+
+    <div class="input-area">
+      <div class="input-field">
+        <label for="male">남자</label>
+        <input type="radio" name="gender" id="male" checked />
+      </div>
+      <div class="input-field">
+        <label for="female">여자</label>
+        <input type="radio" name="gender" id="female" />
+      </div>
+    </div>
+
+    <h1>Form Tags</h1>
     <input type="text" placeholder="Text를 입력하세요." />
     <input type="number" placeholder="숫자를 입력하세요." />
     <input type="email" placeholder="이메일을 입력하세요." />

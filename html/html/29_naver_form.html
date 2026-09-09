@@ -1,0 +1,84 @@
+<!-- @format -->
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="../css/29_naver_form.css" />
+  </head>
+  <body>
+    <div class="form">
+      <div class="basic-info">
+        <div class="user-id">
+          <input type="text" placeholder="아이디" />
+        </div>
+        <div class="user-password">
+          <input type="password" placeholder="비밀번호" />
+        </div>
+        <div class="user-email">
+          <input
+            type="email"
+            placeholder="[선택] 이메일주소 (비밀번호 찾기 등 본인 확인용)"
+          />
+        </div>
+      </div>
+      <div class="personal-info">
+        <div class="user-name">
+          <input type="text" placeholder="이름" />
+        </div>
+        <div class="user-birthdate">
+          <input type="text" placeholder="생년월일 8자리" />
+        </div>
+        <div class="user-telecom">
+          <div>
+            통신사 선택
+            <ul class="telecoms">
+              <li>SKT</li>
+              <li>SKT 알뜰폰</li>
+              <li>KT</li>
+              <li>KT 알뜰폰</li>
+              <li>LG U+</li>
+              <li>LG U+ 알뜰폰</li>
+            </ul>
+          </div>
+          <!-- <select>
+            <option>SKT</option>
+            <option>SKT 알뜰폰</option>
+            <option>KT</option>
+            <option>KT 알뜰폰</option>
+            <option>LG U+</option>
+            <option>LG U+ 알뜰폰</option>
+          </select> -->
+        </div>
+        <div class="user-type">
+          <div>
+            <input type="radio" name="gender" id="male" checked />
+            <label for="male">남자</label>
+            <input type="radio" name="gender" id="female" />
+            <label for="female">여자</label>
+          </div>
+          <div>
+            <input type="radio" name="foreigner" id="in" checked />
+            <label for="in">내국인</label>
+            <input type="radio" name="foreigner" id="out" />
+            <label for="out">외국인</label>
+          </div>
+        </div>
+      </div>
+      <div class="tel-info">
+        <div>
+          <input type="tel" placeholder="휴대전화번호" />
+        </div>
+      </div>
+      <div class="agreement-info">
+        <div>
+          <input type="checkbox" id="agreement" />
+          <label for="agreement">
+            <div><span>[필수]</span> 인증 약관 전체동의</div></label
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

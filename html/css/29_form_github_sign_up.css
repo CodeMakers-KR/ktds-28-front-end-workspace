@@ -83,3 +83,36 @@ select {
 
   margin-top: 2px;
 }
+
+/* 
+label:has(+ select[required]),
+label:has(+ input[required]) {
+  & > sup::after {
+    content: "*";
+  }
+} 
+*/
+
+label:has(+ input[required], + select[required]) {
+  & > sup::after {
+    content: "*";
+  }
+}
+
+button.submit {
+  display: block;
+  width: 100%;
+
+  background-color: #0a0;
+  padding: 10px;
+  border: 0;
+  border-radius: 7px;
+  margin-top: 1rem;
+
+  font-size: 1.2rem;
+  color: #fff;
+
+  &:hover {
+    background-color: #070;
+  }
+}
