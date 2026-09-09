@@ -220,6 +220,10 @@ select {
             color: #333;
 
             & > li {
+              cursor: pointer;
+              &:hover {
+                background-color: #eee;
+              }
               font-size: 0.75rem;
               display: inline-block;
               padding: 0.625rem;
