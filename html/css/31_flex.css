@@ -1,0 +1,80 @@
+/** @format */
+* {
+  box-sizing: border-box;
+}
+.flex-row {
+  height: 200px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  /* flex item들의 간격 */
+  /* gap: 10px; */
+
+  & > div {
+    background-color: aquamarine;
+
+    /* flex items */
+    flex-basis: 100px;
+    /* flex-basis: 50%; */
+    flex-grow: 1;
+
+    &:first-child {
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.flex-row-reverse {
+  height: 200px;
+
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+
+  & > li {
+    background-color: aquamarine;
+  }
+}
+
+.flex-column {
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* justify-content: center;
+  align-items: center; */
+
+  & > div {
+    background-color: aquamarine;
+
+    flex-basis: 50px;
+  }
+}
+
+.flex-column-reverse {
+  height: 200px;
+
+  padding: 0;
+  margin: 0;
+
+  list-style-type: none;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+  align-items: flex-end;
+
+  & > li {
+    background-color: aquamarine;
+  }
+}

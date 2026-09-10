@@ -1,0 +1,24 @@
+/** @format */
+
+body {
+  font-family: "Hi Melody", sans-serif;
+}
+
+p {
+  font-family: "Nanum Pen Script", cursive;
+}
+
+h1 {
+  font-family: "Dongle", sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Dongle", sans-serif;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "Dongle", sans-serif;
+  font-weight: 300;
+}
