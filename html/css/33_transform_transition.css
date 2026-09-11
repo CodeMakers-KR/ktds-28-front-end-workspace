@@ -13,6 +13,17 @@ body {
 
   & > img {
     width: 20vw;
+
+    /* transition: 이벤트_대상 애니메이션_실행_시간 [가속도종류] [애니메이션 딜레이 시간]; */
+    transition: transform 0.2s;
+
+    &:hover {
+      /* transform: translate(30px, 30px); */
+      /* transform: scale(2, 2); */
+      /* transform: rotate(-30deg); */
+      transform: translate(0px, -20px) scale(1.1, 1.1);
+    }
+
     & + .title {
       font-size: 3rem;
       font-weight: 900;
