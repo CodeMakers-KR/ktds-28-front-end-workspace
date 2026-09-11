@@ -56,7 +56,6 @@ body {
 
 .program {
   position: relative;
-
   transition: transform 0.15s;
   &:hover {
     transform: translate(0, -20px);
@@ -72,14 +71,14 @@ body {
   & > .badge-free,
   & > .badge-option {
     display: inline-block;
-    height: 35px;
 
-    position: relative;
+    position: absolute;
+    top: 10px;
+    left: 10px;
     z-index: 2;
-    top: 45px;
 
     &::after {
-        display: inline-block;
+      display: inline-block;
       color: #333;
       font-weight: 800;
       background-color: #aa0;
