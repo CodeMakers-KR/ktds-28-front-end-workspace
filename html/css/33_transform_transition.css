@@ -1,0 +1,22 @@
+/** @format */
+/* 33_transform_transition.css */
+body {
+  margin: 0;
+}
+.flex {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & > img {
+    width: 20vw;
+    & + .title {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-top: 10px;
+    }
+  }
+}
