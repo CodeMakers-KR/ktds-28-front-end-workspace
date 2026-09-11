@@ -1,0 +1,240 @@
+/** @format */
+
+body {
+  margin: 0;
+
+  background:
+    linear-gradient(#1a1a1a 10%, #1a1a1a11 90%),
+    url(https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/x2x1Gn4QgTuVowyvC5vjsETMDK0/AAAABVTenSAdg5EYJnhI2DMwTh1hdSTBOBvEuuFUSscr4_ucGc49VQbnh_V4NdqnBe308GtXdFfDLxY9TSkh2uXXVQ_1ubV4ytBJaTAckjlsNA743ivXROSF_wWGkg.webp?r=105);
+
+  backdrop-filter: blur(100px);
+  background-position: center;
+  background-size: 500%;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+
+  & img {
+    width: 76px;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 1.5rem 2rem;
+  margin: 0;
+  list-style-type: none;
+  gap: 1.5rem;
+  color: #ccc;
+  font-size: 1.4rem;
+
+  & > .selected {
+    background-color: #fff4;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 20px;
+  }
+
+  & > li.empty {
+    flex-grow: 1;
+  }
+
+  & > li > img:not(.logo) {
+    height: 35px;
+    width: 35px;
+    border-radius: 8px;
+  }
+
+  & > li > .kids {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 0.8rem;
+  }
+}
+
+.new-movie {
+  width: 100%;
+  position: relative;
+  & > .filter {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50px;
+    background: radial-gradient(#e6646500, #000);
+  }
+  & > img {
+    width: 100%;
+    border-radius: 50px;
+    opacity: 1;
+  }
+
+  & > .title {
+    position: absolute;
+    bottom: 370px;
+    left: 40px;
+    z-index: 3;
+    width: 40%;
+    opacity: 1;
+    border-radius: 0px;
+  }
+
+  & > .movie-info {
+    position: absolute;
+    bottom: 320px;
+    font-size: 1.4rem;
+    left: 40px;
+    z-index: 3;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    list-style-type: none;
+    color: #fff;
+
+    & > li:not(:last-child)::after {
+      content: "•";
+      color: #aaa;
+      margin: 0 5px;
+    }
+  }
+
+  & > .summary {
+    font-size: 1.6rem;
+    color: #fff;
+
+    margin: 0;
+
+    width: 50%;
+    position: absolute;
+    bottom: 220px;
+    left: 40px;
+    z-index: 3;
+  }
+
+  & > .play {
+    background-color: #fff;
+    border: 0;
+    font-size: 1.6rem;
+    padding: 10px 15px 10px 20px;
+    border-radius: 25px;
+
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+    z-index: 3;
+    &::before {
+      content: "> ";
+    }
+  }
+
+  & > .detail {
+    background-color: #fff6;
+    color: #fff;
+    border: 0;
+    font-size: 1.6rem;
+    padding: 10px 15px 10px 20px;
+    border-radius: 25px;
+
+    position: absolute;
+    bottom: 60px;
+    left: 150px;
+    z-index: 3;
+  }
+}
+
+.your-contents {
+  display: flex;
+  flex-direction: column;
+
+  & > div {
+    color: #fff;
+    margin: 20px 0 10px 0;
+  }
+
+  & > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    & > li {
+      position: relative;
+      flex-basis: 330px;
+      flex-shrink: 0;
+
+      & > div {
+        position: absolute;
+        width: 100%;
+        display: none;
+        color: #fff;
+        background-color: #333;
+      }
+      & > img {
+        width: 100%;
+        border-radius: 15px;
+      }
+
+      transition: all 0.2s;
+      &:hover {
+        & > img {
+          border-radius: 0;
+        }
+        & > div {
+          display: block;
+        }
+        transform: scale(1.5, 1.5) translate(0, -40px);
+        /* animation: 0.2s linear 1s forwards scaleup; */
+        z-index: 100;
+      }
+    }
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.gap-10px {
+  gap: 10px;
+}
+.gap-20px {
+  gap: 20px;
+}
+.empty {
+  flex-grow: 1;
+}

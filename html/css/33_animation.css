@@ -56,14 +56,16 @@ body {
 
 .program {
   position: relative;
-  transition: transform 0.15s;
+  /* transition: transform 0.15s, opacity 0.15s; */
+  transition: all 0.15s;
   &:hover {
     transform: translate(0, -20px);
+    opacity: 0.5;
 
     & > .badge-new,
     & > .badge-free,
     & > .badge-option {
-      animation: 0.2s linear 0s infinite shake;
+      animation: 0.2s linear 1s infinite shake;
     }
   }
 

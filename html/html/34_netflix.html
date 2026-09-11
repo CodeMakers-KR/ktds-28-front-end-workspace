@@ -1,0 +1,637 @@
+<!-- @format -->
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="../css/34_netflix.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <ul class="menu">
+          <li>
+            <img
+              class="logo"
+              src="https://occ.a.nflxso.net/dnmt/api/v6/iL4oJVDYZ8KLSrJ6eG2OwtghbfQ/AAAAAdEhm1UzVexHjKqFOP9W6E2UVtkWFvL-vdxIEbTU81rsqNuPmDDy_dQvmQ85ath49JBruVV4aGQA3gY2Dl5SiqFf-AEwPAZBTNkW8FMxGXpDN2mHrf8KlRRiddj1P422ZW1eZkZNWLTd.svg"
+            />
+          </li>
+          <li class="selected">홈</li>
+          <li>시리즈</li>
+          <li>영화</li>
+          <li>게임</li>
+          <li>더보기</li>
+          <li class="empty"></li>
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              data-icon="MagnifyingGlassMedium"
+              data-icon-id=":R1al6pjal4iaq:"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              role="img"
+              aria-label="검색"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0m-1.38 7.03a9 9 0 1 1 1.41-1.41l5.68 5.67-1.42 1.42z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </li>
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              data-icon="BellMedium"
+              data-icon-id=":Rlal7ajal4iaq:"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              role="img"
+              aria-label="알림"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M13 4.07A7 7 0 0 1 19 11v4.25q1.58.12 3.1.28l-.2 2a93 93 0 0 0-19.8 0l-.2-2q1.52-.15 3.1-.28V11a7 7 0 0 1 6-6.93V2h2zm4 11.06V11a5 5 0 0 0-10 0v4.13a97 97 0 0 1 10 0m-8.37 4.24C8.66 20.52 10.15 22 12 22s3.34-1.48 3.37-2.63c.01-.22-.2-.37-.42-.37h-5.9c-.23 0-.43.15-.42.37"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/SO2HoVCx33X8phZh2pZZmQ4QgNY/AAAABd7I3OLRBW8l5ZtbEeyEvA88G0LEQSLrOSRW8zZmCqgAw4Tnf7xIR-HSQXV3x9JxlVJGxmafQvOu4AcZt3a1PQ6ngoqaHo0.png?r=15b"
+            /><span class="kids">키즈</span>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/SO2HoVCx33X8phZh2pZZmQ4QgNY/AAAABWdoQDrgD7cokEYrF-FVdgfoil5wiBMg6j3GeUjYY_av6C64opFSXOsJ5U8EF02G6SB6b4zUw4MSG6EtpQu8gUBg1Y5Bgs4.png?r=229"
+            />
+          </li>
+        </ul>
+      </div>
+
+      <div class="new-movie">
+        <div class="filter"></div>
+        <img
+          src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/x2x1Gn4QgTuVowyvC5vjsETMDK0/AAAABVTenSAdg5EYJnhI2DMwTh1hdSTBOBvEuuFUSscr4_ucGc49VQbnh_V4NdqnBe308GtXdFfDLxY9TSkh2uXXVQ_1ubV4ytBJaTAckjlsNA743ivXROSF_wWGkg.webp?r=105"
+          alt=""
+        />
+        <img
+          class="title"
+          src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/S4oi7EPZbv2UEPaukW54OORa0S8/AAAABXiiLf9K5CFGPzHvUDLaXJuDMchm4GETXICL8TL_cb_vYYESsnGDKL3HIQVCHHsToZR6w8jGRnH6Le8WlpURMwchvVqHaLGGwPar.webp?r=9a5"
+        />
+        <ul class="movie-info">
+          <li>시리즈</li>
+          <li>드라마 장르</li>
+          <li>2018</li>
+          <li>에피소드 24개</li>
+          <li>15+</li>
+        </ul>
+        <p class="summary">
+          1871년 신미양요 직후 미국으로 건너갔던 소년. 격변하는 역사 속에서
+          고국으로 돌아와, 사대부의 귀한 따님을 가슴에 품는다.
+        </p>
+        <button class="play">재생</button>
+        <button class="detail">상세 정보</button>
+      </div>
+
+      <div class="your-contents">
+        <div>꼭 챙겨 보세요! 회원님을 위한 콘텐츠</div>
+        <ul>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABWWSCfyeVR0bcDwh7u3ASyE6tGLpeby25ghDa9PmePmmjqz9G4Gmwv1dVZVVbEByGCEAW7iL4wTtT7TM3GQxlaltEdxm5fJcYz8.webp?r=b28"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABdXFRF9DZY1Z6bX0lBPNd9STvpUlODv8crBW7YYzEWsmLqJLOrjFtNRWmmGWuAmR-OPUxuT2kaobQiffqS2qikdmDr1mWVfRAvv34QEIFM4uDs9cBoil97bnxy9Xrj3gPSNPP3zk-5nqTHDSFYuZ7CIgPWqeWpFRTtzMGDsMpMLqyxawyy7SsMrHtW5ciB3KtPbj4zF-WOs2rrXyzXs.webp?r=fd1"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABbID52YwdZTnmPaCQ-GGVXHvzoJjWueaBw1g7ZYbq5zTuvtD-XWh-Cd7FcEO4zR2ThAZZZFjydi9iVbHnbnTRAV3qdi_xwARp2hTYxslTjnnIzmULCNhtnY51cv7hqHY1Cwc_ECBQyHxi57xKRaO6mkE9QbBU7lTGx_Dd3RFbSR8f3-cIhYeP-_k48zOH2MH_CP_bTmgUndqctu0sPE.webp?r=8ab"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABaAiL8JKlGyUXVG3w4nKXSEURV0yLXhoUKgqQ505Nap0MX02t5OIAcoA7YJiQRMGjigfZZzdQG8TWwzMvJbC-Bjkjp0-RLDcvF0.webp?r=e06"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABYihSgGe5uZgqHOvFTQ4AEW3xIZRKomBvtx_rFhQy66rsWckZd-DMtIRU8Zr13qVUh8yplOGczsHsOFrttHEo0msyzdLtmeniJpq8fJWFNKHDwKa7g9_Evx7HWxtJhx0NoNgSb6uR8xuCCe6gem90X3UtVZt0AIDypGTRINCYD4.webp?r=2af"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABWWSCfyeVR0bcDwh7u3ASyE6tGLpeby25ghDa9PmePmmjqz9G4Gmwv1dVZVVbEByGCEAW7iL4wTtT7TM3GQxlaltEdxm5fJcYz8.webp?r=b28"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABdXFRF9DZY1Z6bX0lBPNd9STvpUlODv8crBW7YYzEWsmLqJLOrjFtNRWmmGWuAmR-OPUxuT2kaobQiffqS2qikdmDr1mWVfRAvv34QEIFM4uDs9cBoil97bnxy9Xrj3gPSNPP3zk-5nqTHDSFYuZ7CIgPWqeWpFRTtzMGDsMpMLqyxawyy7SsMrHtW5ciB3KtPbj4zF-WOs2rrXyzXs.webp?r=fd1"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABbID52YwdZTnmPaCQ-GGVXHvzoJjWueaBw1g7ZYbq5zTuvtD-XWh-Cd7FcEO4zR2ThAZZZFjydi9iVbHnbnTRAV3qdi_xwARp2hTYxslTjnnIzmULCNhtnY51cv7hqHY1Cwc_ECBQyHxi57xKRaO6mkE9QbBU7lTGx_Dd3RFbSR8f3-cIhYeP-_k48zOH2MH_CP_bTmgUndqctu0sPE.webp?r=8ab"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABaAiL8JKlGyUXVG3w4nKXSEURV0yLXhoUKgqQ505Nap0MX02t5OIAcoA7YJiQRMGjigfZZzdQG8TWwzMvJbC-Bjkjp0-RLDcvF0.webp?r=e06"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABYihSgGe5uZgqHOvFTQ4AEW3xIZRKomBvtx_rFhQy66rsWckZd-DMtIRU8Zr13qVUh8yplOGczsHsOFrttHEo0msyzdLtmeniJpq8fJWFNKHDwKa7g9_Evx7HWxtJhx0NoNgSb6uR8xuCCe6gem90X3UtVZt0AIDypGTRINCYD4.webp?r=2af"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="your-contents">
+        <div>회원님을 위해 엄선한 오늘의 콘텐츠</div>
+        <ul>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABWWSCfyeVR0bcDwh7u3ASyE6tGLpeby25ghDa9PmePmmjqz9G4Gmwv1dVZVVbEByGCEAW7iL4wTtT7TM3GQxlaltEdxm5fJcYz8.webp?r=b28"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABdXFRF9DZY1Z6bX0lBPNd9STvpUlODv8crBW7YYzEWsmLqJLOrjFtNRWmmGWuAmR-OPUxuT2kaobQiffqS2qikdmDr1mWVfRAvv34QEIFM4uDs9cBoil97bnxy9Xrj3gPSNPP3zk-5nqTHDSFYuZ7CIgPWqeWpFRTtzMGDsMpMLqyxawyy7SsMrHtW5ciB3KtPbj4zF-WOs2rrXyzXs.webp?r=fd1"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABbID52YwdZTnmPaCQ-GGVXHvzoJjWueaBw1g7ZYbq5zTuvtD-XWh-Cd7FcEO4zR2ThAZZZFjydi9iVbHnbnTRAV3qdi_xwARp2hTYxslTjnnIzmULCNhtnY51cv7hqHY1Cwc_ECBQyHxi57xKRaO6mkE9QbBU7lTGx_Dd3RFbSR8f3-cIhYeP-_k48zOH2MH_CP_bTmgUndqctu0sPE.webp?r=8ab"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABaAiL8JKlGyUXVG3w4nKXSEURV0yLXhoUKgqQ505Nap0MX02t5OIAcoA7YJiQRMGjigfZZzdQG8TWwzMvJbC-Bjkjp0-RLDcvF0.webp?r=e06"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABYihSgGe5uZgqHOvFTQ4AEW3xIZRKomBvtx_rFhQy66rsWckZd-DMtIRU8Zr13qVUh8yplOGczsHsOFrttHEo0msyzdLtmeniJpq8fJWFNKHDwKa7g9_Evx7HWxtJhx0NoNgSb6uR8xuCCe6gem90X3UtVZt0AIDypGTRINCYD4.webp?r=2af"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABWWSCfyeVR0bcDwh7u3ASyE6tGLpeby25ghDa9PmePmmjqz9G4Gmwv1dVZVVbEByGCEAW7iL4wTtT7TM3GQxlaltEdxm5fJcYz8.webp?r=b28"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABdXFRF9DZY1Z6bX0lBPNd9STvpUlODv8crBW7YYzEWsmLqJLOrjFtNRWmmGWuAmR-OPUxuT2kaobQiffqS2qikdmDr1mWVfRAvv34QEIFM4uDs9cBoil97bnxy9Xrj3gPSNPP3zk-5nqTHDSFYuZ7CIgPWqeWpFRTtzMGDsMpMLqyxawyy7SsMrHtW5ciB3KtPbj4zF-WOs2rrXyzXs.webp?r=fd1"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABbID52YwdZTnmPaCQ-GGVXHvzoJjWueaBw1g7ZYbq5zTuvtD-XWh-Cd7FcEO4zR2ThAZZZFjydi9iVbHnbnTRAV3qdi_xwARp2hTYxslTjnnIzmULCNhtnY51cv7hqHY1Cwc_ECBQyHxi57xKRaO6mkE9QbBU7lTGx_Dd3RFbSR8f3-cIhYeP-_k48zOH2MH_CP_bTmgUndqctu0sPE.webp?r=8ab"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABaAiL8JKlGyUXVG3w4nKXSEURV0yLXhoUKgqQ505Nap0MX02t5OIAcoA7YJiQRMGjigfZZzdQG8TWwzMvJbC-Bjkjp0-RLDcvF0.webp?r=e06"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://occ-0-1360-2218.1.nflxso.net/dnm/api/v6/0Qzqdxw-HG1AiOKLWWPsFOUDA2E/AAAABYihSgGe5uZgqHOvFTQ4AEW3xIZRKomBvtx_rFhQy66rsWckZd-DMtIRU8Zr13qVUh8yplOGczsHsOFrttHEo0msyzdLtmeniJpq8fJWFNKHDwKa7g9_Evx7HWxtJhx0NoNgSb6uR8xuCCe6gem90X3UtVZt0AIDypGTRINCYD4.webp?r=2af"
+            />
+            <div class="more-info">
+              <div class="flex-column gap-20px">
+                <ul class="flex-row gap-10px">
+                  <li>재생</li>
+                  <li>찜하기</li>
+                  <li>평가하기</li>
+                  <li class="empty"></li>
+                  <li>회차 및 상세정보</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>19</li>
+                  <li>리미티드 시리즈</li>
+                  <li>HD</li>
+                </ul>
+                <ul class="flex-row gap-10px">
+                  <li>심리</li>
+                  <li>어두운</li>
+                  <li>미스터리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
