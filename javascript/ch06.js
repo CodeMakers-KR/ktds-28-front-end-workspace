@@ -1,64 +1,43 @@
 /** @format */
 
-// window의 타입 Window
-Window.prototype.afterRender = function (callbackFunction) {
-  this.onload = callbackFunction;
-};
-
-// document의 타입 Document
-Document.prototype.find = function (selector) {
-  return this.querySelector(selector);
-};
-
-// DOM 의 타입 ==> Element
-Element.prototype.next = function () {
-  return this.nextElementSibling;
-};
-Element.prototype.find = function (selector) {
-  return this.querySelector(selector);
-};
-Element.prototype.data = function (name, value) {
-  if (!value) {
-    return this.dataset[name];
-  } else {
-    this.dataset[name] = value;
-  }
-};
-Element.prototype.val = function (value) {
-  if (!value) {
-    return this.value;
-  } else {
-    this.value = value;
-  }
-};
-Element.prototype.css = function (styles) {
-  for (let key in styles) {
-    this.style.setProperty(key, styles[key]);
-  }
-};
-Element.prototype.removeCss = function (properties) {
-  const element = this;
-  properties.forEach(function (eachProp) {
-    element.style.removeProperty(eachProp);
-  });
-};
-
-afterRender(function () {
-  const image = document.find("img");
+onload = function () {
+  const image = document.querySelector("img");
   image.onmouseenter = function () {
-    const ticket = document.find(".ticket");
+    const ticket = document.querySelector(".ticket");
+    console.log(ticket);
+    console.dir(ticket);
 
-    ticket.css({
+    css(ticket, {
       display: "block",
       ["font-size"]: "2rem",
       color: "#f00",
       ["background-color"]: "#fff",
     });
+    // ticket.style.setProperty("display", "block");
+    // ticket.style.setProperty("font-size", "2rem");
+    // ticket.style.setProperty("color", "#f00");
+    // ticket.style.setProperty("background-color", "#fff");
   };
 
   image.onmouseleave = function () {
-    const ticket = document.find(".ticket");
+    const ticket = document.querySelector(".ticket");
     // ticket.style.removeProperty("display");
-    ticket.removeCss(["display", "font-size", "color", "background-color"]);
+    removeCSS(ticket, ["display", "font-size", "color", "background-color"]);
   };
-});
+};
+
+function css(dom, styles) {
+  if (dom) {
+    for (let key in styles) {
+      dom.style.setProperty(key, styles[key]);
+    }
+  }
+}
+
+function removeCSS(dom, properties) {
+  if (dom) {
+    properties.forEach(function (eachProp) {
+      dom.style.removeProperty(eachProp);
+    });
+  }
+}
