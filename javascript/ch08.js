@@ -13,11 +13,11 @@ onload = function () {
 
       users.innerHTML = "";
 
-      userList.forEach(function (eachUser) {
+      userList.forEach(function ({html_url, avatar_url, login}) {
         const userDom = document.importNode(template.content, true);
-        userDom.querySelector("a").setAttribute("href", eachUser.html_url);
-        userDom.querySelector("img").setAttribute("src", eachUser.avatar_url);
-        userDom.querySelector(".user-name").innerText = eachUser.login;
+        userDom.querySelector("a").setAttribute("href", html_url);
+        userDom.querySelector("img").setAttribute("src", avatar_url);
+        userDom.querySelector(".user-name").innerText = login;
         users.append(userDom);
       });
     }
@@ -44,12 +44,12 @@ onload = function () {
 
       posts.innerHTML = "";
 
-      postList.forEach(function (eachPost) {
+      postList.forEach(function ({userId, id, title, body}) {
         const postDom = document.importNode(template.content, true);
-        postDom.querySelector("li").dataset.userId = eachPost.userId;
-        postDom.querySelector("li").dataset.id = eachPost.id;
-        postDom.querySelector(".title").innerText = eachPost.title;
-        postDom.querySelector(".body").innerText = eachPost.body;
+        postDom.querySelector("li").dataset.userId = userId;
+        postDom.querySelector("li").dataset.id = id;
+        postDom.querySelector(".title").innerText = title;
+        postDom.querySelector(".body").innerText = body;
 
         postDom.querySelector(".title").onclick = function () {
           const body = this.nextElementSibling;
@@ -86,12 +86,12 @@ onload = function () {
       comments.innerHTML = "";
       console.log(comments.childNodes.length);
 
-      commentList.forEach(function (eachComment) {
+      commentList.forEach(function ({postId, name, email, body}) {
         const commentDom = document.importNode(template.content, true);
-        commentDom.querySelector("li").dataset.postId = eachComment.postId;
-        commentDom.querySelector(".name").innerText = eachComment.name;
-        commentDom.querySelector(".email").innerText = eachComment.email;
-        commentDom.querySelector(".body").innerText = eachComment.body;
+        commentDom.querySelector("li").dataset.postId = postId;
+        commentDom.querySelector(".name").innerText = name;
+        commentDom.querySelector(".email").innerText = email;
+        commentDom.querySelector(".body").innerText = body;
 
         comments.append(commentDom);
       });
