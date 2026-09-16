@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link type="text/css" rel="stylesheet" href="08_ajax.css" />
-    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
-    <script type="text/javascript" src="08_ajax_jquery.js"></script>
+    <link type="text/css" rel="stylesheet" href="ch08_ajax.css" />
+    <script type="text/javascript" src="./ch08.js"></script>
   </head>
   <body>
     <div class="spinner"></div>
+
     <button class="load-git-users" type="button">Load Git Users</button>
     <button class="load-comments" type="button">Load Comments</button>
+    <button class="load-posts" type="button">Load Posts</button>
 
     <h1>Posts</h1>
     <ul class="posts"></ul>
@@ -20,19 +21,19 @@
     <ul class="comments"></ul>
 
     <template id="post-item-template">
-      <li data-user-id="#data-id#" data-id="#id#">
-        <div class="title">#title#</div>
-        <div class="body">#body#</div>
+      <li data-user-id="" data-id="">
+        <div class="title"></div>
+        <div class="body"></div>
       </li>
     </template>
 
     <template id="comments-item-template">
-      <li data-post-id="#post-id#">
+      <li data-post-id="">
         <ul class="author">
-          <li class="name">#name#</li>
-          <li class="email">#email#</li>
+          <li class="name"></li>
+          <li class="email"></li>
         </ul>
-        <div class="body">#body#</div>
+        <div class="body"></div>
       </li>
     </template>
   </body>
