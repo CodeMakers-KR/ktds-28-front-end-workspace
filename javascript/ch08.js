@@ -5,6 +5,36 @@
 // template: post-item-template 사용.
 
 onload = function () {
+  const userButton = document.querySelector(".load-git-users");
+  userButton.onclick = function () {
+    function fillUsers(userList) {
+      const template = document.querySelector("#github-user-template");
+      const users = document.querySelector(".github-users");
+
+      users.innerHTML = "";
+
+      userList.forEach(function (eachUser) {
+        const userDom = document.importNode(template.content, true);
+        userDom.querySelector("a").setAttribute("href", eachUser.html_url);
+        userDom.querySelector("img").setAttribute("src", eachUser.avatar_url);
+        userDom.querySelector(".user-name").innerText = eachUser.login;
+        users.append(userDom);
+      });
+    }
+    (async function () {
+      try {
+        const fetchResult = await fetch(
+          "https://api.github.com/users",
+        );
+        const body = await fetchResult.json();
+        console.log(body);
+        fillUsers(body);
+      } catch (e) {
+        console.log(e.message);
+      }
+    })();
+  };
+
   // post 불러오기 추가 작성.
   const postsButton = document.querySelector(".load-posts");
   postsButton.onclick = function () {
@@ -21,13 +51,13 @@ onload = function () {
         postDom.querySelector(".title").innerText = eachPost.title;
         postDom.querySelector(".body").innerText = eachPost.body;
 
-        postDom.querySelector(".title").onclick = function() {
-            const body = this.nextElementSibling;
-            if (body.style.display === "none" || !body.style.display) {
-                body.style.display = "block";
-            } else {
-                body.style.display = "none";
-            }
+        postDom.querySelector(".title").onclick = function () {
+          const body = this.nextElementSibling;
+          if (body.style.display === "none" || !body.style.display) {
+            body.style.display = "block";
+          } else {
+            body.style.display = "none";
+          }
         };
 
         posts.append(postDom);

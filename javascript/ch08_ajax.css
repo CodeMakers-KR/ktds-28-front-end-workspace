@@ -18,6 +18,50 @@ body {
   display: none;
 }
 
+.github-users {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  
+  & > li {
+    flex-basis: 150px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    & > a {
+      text-decoration: none;
+      & > img {
+        width: 100%;
+        border-radius: 50%;
+        
+      }
+
+      &:hover {
+        & > img {
+          outline: 3px solid #666;
+        }
+      }
+    }
+
+    & > .user-name {
+      text-align: center;
+      font-size: 1.4rem;
+    }
+
+    &:hover {
+      transform: scale(1.2, 1.2);
+      & > div {
+        font-weight: 900;
+      }
+    }
+  }
+}
+
 .posts {
   margin: 0;
   padding: 0;
