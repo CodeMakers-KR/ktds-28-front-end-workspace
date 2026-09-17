@@ -1,38 +1,24 @@
 /** @format */
 
-const name = "ABC";
-let age = 15;
-
-function sum(num1, num2) {
-  return num1 + num2;
+export function getDom(selector) {
+  // document에서 selector dom 하나 반환시키기
+  return document.querySelector(selector);
 }
 
-function sub(num1, num2) {
-  return num1 - num2;
+export function onClick(
+  dom,
+  cbFunction /* 버튼을 클릭했을 때 이벤트 (+ - * /) */,
+) {
+  // dom에 click 이벤트를 할당하기
+  dom.onclick = cbFunction;
 }
 
-function mul(num1, num2) {
-  return num1 * num2;
+export function getValue(dom) {
+  // dom에 입력된 값을 반환하기
+  return parseInt(dom.value);
 }
 
-function div(num1, num2) {
-  return num1 / num2;
-}
-
-let arrays = [1, 2, 3];
-
-function addNumbers(number) {
-  arrays.push(number);
-}
-
-function removeNumber(number) {
-  arrays = arrays.filter((n) => n != number);
-}
-
-function printNumbers() {
-  arrays.forEach((n) => console.log(n));
-}
-
-function getNumbers() {
-  return arrays;
+export function setText(dom, text) {
+  // dom에 textContent를 할당하기
+  dom.textContent = text;
 }
