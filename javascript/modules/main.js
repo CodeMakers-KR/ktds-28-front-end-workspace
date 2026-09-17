@@ -1,0 +1,5 @@
+/** @format */
+
+onload = function () {
+  alert("!");
+};
