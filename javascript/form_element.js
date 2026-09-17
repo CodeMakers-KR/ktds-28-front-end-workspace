@@ -42,106 +42,134 @@ onload = function () {
     };
   });
 
-  const genreCheckboxes = document.querySelectorAll(
+  //   const genreCheckboxes = document.querySelectorAll(
+  //     "input[type=checkbox][name=favorate-genre]",
+  //   );
+
+  //   case5();
+  //   genreCheckboxes.forEach(function (gnr) {
+  //     gnr.onchange();
+  //   });
+
+  //   function case1() {
+  //     const genreCheckboxes = document.querySelectorAll(
+  //       "input[type=checkbox][name=favorate-genre]",
+  //     );
+
+  //     genreCheckboxes.forEach(function (eachGenre) {
+  //       eachGenre.onchange = function () {
+  //         let value = "";
+  //         genreCheckboxes.forEach(function (gnr) {
+  //           if (gnr.checked) {
+  //             value += `, ${gnr.value}`;
+  //           }
+  //         });
+
+  //         this.closest(".page-125").querySelector(".genre-name").textContent =
+  //           value.substring(1).trim();
+  //       };
+  //     });
+  //   }
+
+  //   function case2() {
+  //     const genreCheckboxes = document.querySelectorAll(
+  //       "input[type=checkbox][name=favorate-genre]",
+  //     );
+  //     genreCheckboxes.forEach(function (eachGenre) {
+  //       eachGenre.onchange = function () {
+  //         let value = "";
+  //         document
+  //           .querySelectorAll("input[type=checkbox][name=favorate-genre]:checked")
+  //           .forEach(function (gnr) {
+  //             value += `, ${gnr.value}`;
+  //           });
+
+  //         this.closest(".page-125").querySelector(".genre-name").textContent =
+  //           value.substring(1).trim();
+  //       };
+  //     });
+  //   }
+
+  //   function case3() {
+  //     genreCheckboxes.forEach(function (eachGenre) {
+  //       eachGenre.onchange = function () {
+  //         const checkedBoxes = document.querySelectorAll(
+  //           "input[type=checkbox][name=favorate-genre]:checked",
+  //         );
+  //         let value = Array.from(checkedBoxes)
+  //           .map(function (gnr) {
+  //             return gnr.value;
+  //           })
+  //           .join(", ");
+
+  //         this.closest(".page-125").querySelector(".genre-name").textContent =
+  //           value;
+  //       };
+  //     });
+  //   }
+
+  //   function case4() {
+  //     let genreValue = [];
+  //     genreCheckboxes.forEach(function (eachGenre) {
+  //       eachGenre.onchange = function () {
+  //         const value = this.value;
+  //         if (this.checked) {
+  //           genreValue.push(value);
+  //         } else {
+  //           genreValue = genreValue.filter(function (gnrVal) {
+  //             return gnrVal !== value;
+  //           });
+  //         }
+
+  //         this.closest(".page-125").querySelector(".genre-name").textContent =
+  //           genreValue.join(", ");
+  //       };
+  //     });
+  //   }
+
+  //   function case5() {
+  //     genreCheckboxes.forEach(function (eachGenre) {
+  //       eachGenre.onchange = function () {
+  //         let value = Array.from(genreCheckboxes)
+  //           .filter((gnr) => gnr.checked)
+  //           .map((gnr) => gnr.value)
+  //           .join(", ");
+
+  //         this.closest(".page-125").querySelector(".genre-name").textContent =
+  //           value;
+  //       };
+  //     });
+  //   }
+
+  const checkedAll = document.querySelector("#checked-all");
+  checkedAll.onchange = ({ target }) => {
+    const checked = target.checked;
+
+    const checkItems = document.querySelectorAll(
+      "input[type=checkbox][name=favorate-genre]",
+    );
+    checkItems.forEach((item) => {
+      item.checked = checked;
+      // 체크박스의 onchange 이벤트 실행.
+      // event 파라미터도 함께 전달.
+      item.onchange({ target: item });
+    });
+  };
+
+  const genreList = document.querySelectorAll(
     "input[type=checkbox][name=favorate-genre]",
   );
+  genreList.forEach((checkbox) => {
+    checkbox.onchange = ({ target }) => {
+      const checkedItems = Array.from(genreList).filter((gnr) => gnr.checked);
 
-  case5();
-  genreCheckboxes.forEach(function (gnr) {
-    gnr.onchange();
+      let value = checkedItems.map((gnr) => gnr.value).join(", ");
+
+      target.closest(".page-125").querySelector(".genre-name").textContent =
+        value;
+
+      // 모든 체크박스를 선택했다면, "전체 선택"도 체크한다.
+      checkedAll.checked = genreList.length === checkedItems.length;
+    };
   });
-
-  function case1() {
-    const genreCheckboxes = document.querySelectorAll(
-      "input[type=checkbox][name=favorate-genre]",
-    );
-
-    genreCheckboxes.forEach(function (eachGenre) {
-      eachGenre.onchange = function () {
-        let value = "";
-        genreCheckboxes.forEach(function (gnr) {
-          if (gnr.checked) {
-            value += `, ${gnr.value}`;
-          }
-        });
-
-        this.closest(".page-125").querySelector(".genre-name").textContent =
-          value.substring(1).trim();
-      };
-    });
-  }
-
-  function case2() {
-    const genreCheckboxes = document.querySelectorAll(
-      "input[type=checkbox][name=favorate-genre]",
-    );
-    genreCheckboxes.forEach(function (eachGenre) {
-      eachGenre.onchange = function () {
-        let value = "";
-        document
-          .querySelectorAll("input[type=checkbox][name=favorate-genre]:checked")
-          .forEach(function (gnr) {
-            value += `, ${gnr.value}`;
-          });
-
-        this.closest(".page-125").querySelector(".genre-name").textContent =
-          value.substring(1).trim();
-      };
-    });
-  }
-
-  function case3() {
-    genreCheckboxes.forEach(function (eachGenre) {
-      eachGenre.onchange = function () {
-        const checkedBoxes = document.querySelectorAll(
-          "input[type=checkbox][name=favorate-genre]:checked",
-        );
-        let value = Array.from(checkedBoxes)
-          .map(function (gnr) {
-            return gnr.value;
-          })
-          .join(", ");
-
-        this.closest(".page-125").querySelector(".genre-name").textContent =
-          value;
-      };
-    });
-  }
-
-  function case4() {
-    let genreValue = [];
-    genreCheckboxes.forEach(function (eachGenre) {
-      eachGenre.onchange = function () {
-        const value = this.value;
-        if (this.checked) {
-          genreValue.push(value);
-        } else {
-          genreValue = genreValue.filter(function (gnrVal) {
-            return gnrVal !== value;
-          });
-        }
-
-        this.closest(".page-125").querySelector(".genre-name").textContent =
-          genreValue.join(", ");
-      };
-    });
-  }
-
-  function case5() {
-    genreCheckboxes.forEach(function (eachGenre) {
-      eachGenre.onchange = function () {
-        let value = Array.from(genreCheckboxes)
-          .filter(function (gnr) {
-            return gnr.checked;
-          })
-          .map(function (gnr) {
-            return gnr.value;
-          })
-          .join(", ");
-
-        this.closest(".page-125").querySelector(".genre-name").textContent =
-          value;
-      };
-    });
-  }
 };
